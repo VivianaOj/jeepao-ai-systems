@@ -1,0 +1,31 @@
+<header class="header">
+  <div class="header__inner container">
+    <a href="#inicio" class="header__brand" (click)="closeMenu()">
+      <app-logo></app-logo>
+      <span class="header__brand-text"
+        >Jeepao <span class="header__brand-ai">AI</span> <span class="header__brand-systems">Systems</span></span
+      >
+    </a>
+
+    <nav class="header__nav" [class.header__nav--open]="isMenuOpen()">
+      <a href="#inicio" (click)="closeMenu()">Inicio</a>
+      <a href="#quienes-somos" (click)="closeMenu()">Quiénes somos</a>
+      <a href="#servicios" (click)="closeMenu()">Servicios</a>
+      <a href="#productos" (click)="closeMenu()">Productos</a>
+      <a href="#equipo" (click)="closeMenu()">Equipo</a>
+      <a href="#faq" (click)="closeMenu()">FAQ</a>
+      <a href="#contacto" class="header__cta" (click)="closeMenu()">Hablemos</a>
+    </nav>
+
+    <button
+      class="header__toggle"
+      (click)="toggleMenu()"
+      [attr.aria-expanded]="isMenuOpen()"
+      aria-label="Abrir menú"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>

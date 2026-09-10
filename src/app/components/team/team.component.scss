@@ -1,0 +1,94 @@
+.team {
+  position: relative;
+  background: linear-gradient(180deg, #0d1f3d 0%, #0a192f 100%);
+}
+
+.team__title {
+  color: var(--color-white-ice);
+}
+
+.team__subtitle {
+  color: var(--color-slate-gray);
+}
+
+.team__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+.team-card {
+  background: linear-gradient(160deg, #12213f, #1b3059);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  text-align: left;
+}
+
+.team-card__photo {
+  aspect-ratio: 1 / 1;
+  background: linear-gradient(135deg, var(--color-accent-cyan), var(--color-accent-violet));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.team-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team-card__initials {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 3.5rem;
+  color: #0a192f;
+}
+
+.team-card__body {
+  padding: 1.5rem 1.75rem 1.75rem;
+}
+
+.team-card__body h3 {
+  margin-bottom: 0.25rem;
+  color: var(--color-white-ice);
+}
+
+.team-card__role {
+  display: block;
+  color: var(--color-accent-cyan);
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.team-card__body p {
+  color: var(--color-slate-gray);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.team-card__linkedin {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(100, 255, 218, 0.12);
+  color: var(--color-accent-cyan);
+  margin-top: 1.1rem;
+  transition: background var(--transition);
+}
+
+.team-card__linkedin:hover {
+  background: rgba(100, 255, 218, 0.25);
+}
+
+@media (max-width: 900px) {
+  .team__grid {
+    grid-template-columns: 1fr;
+  }
+}

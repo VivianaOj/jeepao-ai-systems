@@ -1,0 +1,18 @@
+<section id="servicios" class="services section">
+  <div class="container">
+    <h2 class="section-title services__title">Nuestros Servicios</h2>
+    <p class="section-subtitle services__subtitle">Soluciones a la medida para potenciar tu negocio con tecnología</p>
+
+    <div class="services__grid">
+      @for (service of services; track service.title) {
+        <article class="service-card">
+          <div class="service-card__icon">
+            <app-icon [name]="service.icon"></app-icon>
+          </div>
+          <h3>{{ service.title }}</h3>
+          <p>{{ service.description }}</p>
+        </article>
+      }
+    </div>
+  </div>
+</section>

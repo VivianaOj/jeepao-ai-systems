@@ -1,0 +1,57 @@
+<section id="contacto" class="contact section">
+  <div class="contact__bg"></div>
+  <div class="container contact__inner">
+    <div class="contact__intro">
+      <h2 class="section-title contact__title">Hablemos de tu proyecto</h2>
+      <p class="contact__text">
+        ¿Tienes una idea, un problema que resolver o un proceso que automatizar? Cuéntanos y te
+        ayudaremos a encontrar la mejor solución tecnológica para tu negocio.
+      </p>
+
+      <ul class="contact__details">
+        <li>📧 hola&#64;jeepaoaisystems.com</li>
+        <li>📱 +57 300 000 0000</li>
+        <li>📍 Colombia</li>
+      </ul>
+    </div>
+
+    <form class="contact__form" [formGroup]="form" (ngSubmit)="onSubmit()">
+      <label>
+        Nombre
+        <input type="text" formControlName="name" placeholder="Tu nombre" />
+      </label>
+
+      <label>
+        Correo electrónico
+        <input type="email" formControlName="email" placeholder="tucorreo@empresa.com" />
+      </label>
+
+      <label>
+        Empresa (opcional)
+        <input type="text" formControlName="company" placeholder="Nombre de tu empresa" />
+      </label>
+
+      <label>
+        ¿En qué te podemos ayudar?
+        <select formControlName="interest">
+          <option value="IA">Inteligencia Artificial</option>
+          <option value="Automatizacion">Automatización</option>
+          <option value="Arquitectura">Arquitectura</option>
+          <option value="QA">QA</option>
+          <option value="Otro">Otro</option>
+        </select>
+      </label>
+
+      <label>
+        Mensaje
+        <textarea formControlName="message" rows="4" placeholder="Cuéntanos brevemente tu proyecto"></textarea>
+      </label>
+
+      <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+
+      @if (submitted) {
+        <p class="contact__success">¡Gracias! Tu mensaje fue enviado, te contactaremos pronto.</p>
+      }
+    </form>
+  </div>
+</section>

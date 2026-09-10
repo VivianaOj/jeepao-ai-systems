@@ -1,0 +1,18 @@
+<section class="industries section">
+  <div class="container">
+    <h2 class="section-title">¿A quién ayudamos?</h2>
+    <p class="section-subtitle">Trabajamos con negocios de distintos tamaños e industrias</p>
+
+    <div class="industries__grid">
+      @for (industry of industries; track industry.title) {
+        <article class="industry-card">
+          <div class="industry-card__icon">
+            <app-icon [name]="industry.icon"></app-icon>
+          </div>
+          <h3>{{ industry.title }}</h3>
+          <p>{{ industry.description }}</p>
+        </article>
+      }
+    </div>
+  </div>
+</section>

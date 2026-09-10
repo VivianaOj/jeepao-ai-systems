@@ -1,0 +1,16 @@
+<section class="why-us section">
+  <div class="why-us__bg"></div>
+  <div class="container why-us__inner">
+    <h2 class="section-title why-us__title">¿Por qué elegirnos?</h2>
+    <p class="section-subtitle why-us__subtitle">Enfoque integral: IA + Arquitectura + QA</p>
+
+    <div class="why-us__grid">
+      @for (reason of reasons; track reason.title) {
+        <div class="why-us__item">
+          <h3>{{ reason.title }}</h3>
+          <p>{{ reason.description }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>

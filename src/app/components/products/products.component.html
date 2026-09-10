@@ -1,0 +1,32 @@
+<section id="productos" class="products section">
+  <div class="container">
+    <h2 class="section-title products__title">Nuestros Productos</h2>
+    <p class="section-subtitle products__subtitle">Herramientas propias diseñadas para resolver problemas reales</p>
+
+    <div class="products__grid">
+      @for (product of products; track product.name) {
+        <article class="product-card">
+          <div class="product-card__header">
+            <div class="product-card__icon">
+              <app-icon [name]="product.icon"></app-icon>
+            </div>
+            <span class="product-card__status" [class]="'is-' + product.statusClass">{{ product.status }}</span>
+          </div>
+          <h3>{{ product.name }}</h3>
+          <p class="product-card__desc">{{ product.description }}</p>
+          <p class="product-card__audience"><strong>¿Para quién es?</strong> {{ product.audience }}</p>
+          <ul class="product-card__benefits">
+            @for (benefit of product.benefits; track benefit) {
+              <li>{{ benefit }}</li>
+            }
+          </ul>
+          @if (product.link) {
+            <a class="product-card__link" [href]="product.link" target="_blank" rel="noopener noreferrer">
+              {{ product.linkLabel }}
+            </a>
+          }
+        </article>
+      }
+    </div>
+  </div>
+</section>

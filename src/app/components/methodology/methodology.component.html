@@ -1,0 +1,16 @@
+<section id="metodologia" class="methodology section">
+  <div class="container">
+    <h2 class="section-title">Nuestro Proceso de Trabajo</h2>
+    <p class="section-subtitle">Un camino claro, de principio a fin, para cada proyecto</p>
+
+    <ol class="methodology__timeline">
+      @for (step of steps; track step.number) {
+        <li class="methodology__step">
+          <span class="methodology__number">{{ step.number }}</span>
+          <h3>{{ step.title }}</h3>
+          <p>{{ step.description }}</p>
+        </li>
+      }
+    </ol>
+  </div>
+</section>
