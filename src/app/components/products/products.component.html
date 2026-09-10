@@ -5,7 +5,7 @@
 
     <div class="products__grid">
       @for (product of products; track product.name) {
-        <article class="product-card">
+        <article class="product-card" [class.product-card--featured]="product.statusClass === 'available'">
           <div class="product-card__header">
             <div class="product-card__icon">
               <app-icon [name]="product.icon"></app-icon>
