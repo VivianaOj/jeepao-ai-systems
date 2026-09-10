@@ -47,10 +47,17 @@
         <textarea formControlName="message" rows="4" placeholder="Cuéntanos brevemente tu proyecto"></textarea>
       </label>
 
-      <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+      <button type="submit" class="btn btn-primary" [disabled]="status === 'sending'">
+        {{ status === 'sending' ? 'Enviando…' : 'Enviar mensaje' }}
+      </button>
 
-      @if (submitted) {
+      @if (status === 'success') {
         <p class="contact__success">¡Gracias! Tu mensaje fue enviado, te contactaremos pronto.</p>
+      }
+      @if (status === 'error') {
+        <p class="contact__error">
+          No pudimos enviar el mensaje. Intenta de nuevo o escríbenos a hola&#64;jeepaoaisystems.com.
+        </p>
       }
     </form>
   </div>
