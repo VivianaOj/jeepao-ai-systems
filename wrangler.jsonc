@@ -1,0 +1,15 @@
+{
+	// Configuración de despliegue en Cloudflare Workers (sitio estático Angular).
+	// El "Deploy command" de Workers Builds (npx wrangler deploy) usa este archivo
+	// para saber qué carpeta subir como assets estáticos.
+	"$schema": "./node_modules/wrangler/config-schema.json",
+	"name": "jeepao-ai-systems",
+	"compatibility_date": "2026-09-10",
+	"assets": {
+		"directory": "./dist/jeepao-ai-systems/browser",
+		"not_found_handling": "single-page-application"
+	},
+	"observability": {
+		"enabled": true
+	}
+}

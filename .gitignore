@@ -21,3 +21,8 @@ Thumbs.db
 # Logs
 npm-debug.log
 yarn-error.log
+
+# Wrangler (Cloudflare)
+.wrangler
+.dev.vars*
+!.dev.vars.example
