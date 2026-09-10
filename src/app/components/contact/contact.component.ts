@@ -16,7 +16,7 @@ export class ContactComponent {
   //    los mensajes del formulario.
   // 2) Copia la "Access Key" que te llegará a ese correo.
   // 3) Pégala aquí abajo (la clave es pública, está hecha para el código del sitio).
-  private readonly web3formsAccessKey = '';
+  private readonly web3formsAccessKey = 'ca977bcd-6f01-489c-b0cf-42c847901c7e';
 
   private readonly web3formsEndpoint = 'https://api.web3forms.com/submit';
 
